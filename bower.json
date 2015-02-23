@@ -1,0 +1,13 @@
+{
+  "name": "imprenta-app",
+  "version": "0.1.0",
+  "homepage": "https://github.com/muchachada/imprenta-app",
+  "authors": [
+    "Pablo Sanfilippo <sanfilippopablo@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-material": "~0.7.1",
+    "angular-ui-router": "~0.2.13"
+  }
+}

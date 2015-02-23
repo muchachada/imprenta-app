@@ -1,0 +1,32 @@
+{
+  "name": "imprenta-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app/index.html",
+  "scripts": {
+    "start": "nw",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muchachada/imprenta-app"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muchachada/imprenta-app/issues"
+  },
+  "homepage": "https://github.com/muchachada/imprenta-app",
+  "dependencies": {
+    "nw": "^0.12.0-alpha3"
+  },
+  "window": {
+   "title": "Imprenta App",
+   "toolbar": true,
+   "frame": true,
+   "width": 1024,
+   "height": 768,
+   "min_width": 640,
+   "min_height": 480
+ }
+}
