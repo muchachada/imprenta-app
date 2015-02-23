@@ -18,15 +18,16 @@
   },
   "homepage": "https://github.com/muchachada/imprenta-app",
   "dependencies": {
+    "nedb": "^1.1.1",
     "nw": "^0.12.0-alpha3"
   },
   "window": {
-   "title": "Imprenta App",
-   "toolbar": true,
-   "frame": true,
-   "width": 1024,
-   "height": 768,
-   "min_width": 640,
-   "min_height": 480
- }
+    "title": "Imprenta App",
+    "toolbar": true,
+    "frame": true,
+    "width": 1024,
+    "height": 768,
+    "min_width": 640,
+    "min_height": 480
+  }
 }

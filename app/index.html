@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="App">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -7,13 +8,40 @@
   <link rel="stylesheet" href="libs/angular-material/angular-material.css">
   <link rel="stylesheet" href="libs/angular-material/default-theme.css">
 </head>
-<body>
-  Hello
 
+<body ng-controller="MainController">
+
+  <div layout="column" layout-fill>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span>Imprenta App</span>
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-content layout="row" layour-fill flex>
+      <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="true" style="background: #eee">
+        Left Nav!
+      </md-sidenav>
+      <md-content ui-view></md-content>
+    </md-content>
+  </div>
+
+  <!-- Vendor scripts -->
   <script src="libs/angular/angular.js"></script>
   <script src="libs/angular-animate/angular-animate.js"></script>
   <script src="libs/angular-aria/angular-aria.js"></script>
   <script src="libs/angular-material/angular-material.js"></script>
   <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <!-- App scripts -->
+  <script src="scripts/App.js"></script>
+
+  <!-- Controllers -->
+  <script src="scripts/controllers/Main.js"></script>
+  <script src="scripts/controllers/Trabajos.js"></script>
+  <script src="scripts/controllers/Clientes.js"></script>
+
 </body>
+
 </html>
