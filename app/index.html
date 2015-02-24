@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Imprenta App</title>
 
+  <title>Imprenta App</title>
+  
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="libs/angular-material/angular-material.css">
   <link rel="stylesheet" href="libs/angular-material/default-theme.css">
 </head>
@@ -22,20 +24,7 @@
           <md-button ng-click="close()" class="md-primary">Cerrar</md-button>
         </md-content>
       </md-sidenav>
-      <md-content flex class="md-padding">
-        <div layout="column" layout-fill layout-align="center center">
-          <div>
-            <md-button ng-click="toggleLeft()"
-              class="md-primary">
-              Toggle left
-            </md-button>
-            <md-button class="md-fab md-primary" aria-label="Use Android">
-              <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-            </md-button>
-            <md-content ui-view></md-content>
-          </div>  
-        </div>
-      </md-content>
+      <md-content class="container" ui-view></md-content>     
     </section>
   </div>
 

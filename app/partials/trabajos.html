@@ -1,1 +1,24 @@
-Trabajos
+
+  <div layout="column" layout-fill>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span>Imprenta App - Vista Trabajos</span>
+        <!-- fill up the space between left and right area -->
+        <span flex>Spam</span>
+      </div>
+    </md-toolbar>
+    <md-content layout="row" layour-fill flex>
+      <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="true" style="background: #eee">
+        <md-button ui-sref="trabajos">Trabajos</md-button>
+        <md-button ui-sref="clientes">Clientes</md-button>
+      </md-sidenav>
+      <md-content>
+		<div layout="column" layout-fill layout-align="center center">
+			<h1>Vista Trabajos</h1>
+			<md-button ng-click="toggleLeft()" class="md-fab md-primary" aria-label="Use Android">
+			<md-icon md-svg-src="img/icons/android.svg"></md-icon>
+			</md-button>
+		</div>
+      </md-content>
+    </md-content>
+  </div>
