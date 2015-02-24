@@ -1,7 +1,19 @@
-var NeDB = require('nedb');
+var NeDB = require('nedb'),
+path = require('path'),
+gui = require('nw.gui');
 
-angular.module('App').factory('TrabajosService', function(){
+angular.module('App').factory('TrabajosService', function($rootScope){
   var service = {};
-  service.db = new NeDB({autoload: true});
+  var db = new NeDB({filename: path.join(gui.App.dataPath, 'trabajos.db'), autoload: true});
+  service.db = db;
+
+  service.insert = function(doc, cb) {
+    this.db.insert(doc, function(){
+      console.log('inserted')
+      $rootScope.$broadcast('trabajos-db-change');
+      cb() || function(){};
+    });
+  }
+
   return service;
 })
