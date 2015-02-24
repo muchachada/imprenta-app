@@ -10,22 +10,30 @@
 </head>
 
 <body ng-controller="MainController">
-
-  <div layout="column" layout-fill>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span>Imprenta App</span>
-        <!-- fill up the space between left and right area -->
-        <span flex></span>
-      </div>
-    </md-toolbar>
-    <md-content layout="row" layour-fill flex>
-      <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="true" style="background: #eee">
-        <md-button ui-sref="trabajos">Trabajos</md-button>
-        <md-button ui-sref="clientes">Clientes</md-button>
+  <div layout="column">
+    <section layout="row" flex>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-theme-light">
+          <h1 class="md-toolbar-tools">MENU</h1>
+        </md-toolbar>
+        <md-content ng-controller="LeftCtrl" class="md-padding">
+          <md-button ui-sref="trabajos" class="md-primary">Trabajos</md-button>
+          <md-button ui-sref="clientes" class="md-primary">Clientes</md-button>
+          <md-button ng-click="close()" class="md-primary">Cerrar</md-button>
+        </md-content>
       </md-sidenav>
-      <md-content ui-view></md-content>
-    </md-content>
+      <md-content flex class="md-padding">
+        <div layout="column" layout-fill layout-align="center center">
+          <div>
+            <md-button ng-click="toggleLeft()"
+              class="md-primary" hide-gt-md>
+              Toggle left
+            </md-button>
+            <md-content ui-view></md-content>
+          </div>  
+        </div>
+      </md-content>
+    </section>
   </div>
 
   <!-- Vendor scripts -->
