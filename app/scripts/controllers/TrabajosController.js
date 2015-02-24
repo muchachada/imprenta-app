@@ -15,5 +15,9 @@ angular.module('App').controller('TrabajosController', [
     })
   };
 
+  $scope.selectTrabajo = function (i) {
+    $scope.trabajo = $scope.trabajos[i]
+  }
+
 
 }]);

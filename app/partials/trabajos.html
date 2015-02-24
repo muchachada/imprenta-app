@@ -3,12 +3,13 @@
   <md-list>
     <md-item ng-repeat="trabajo in trabajos">
       <md-item-content>
-        {{ trabajo.title }}
+        <a href="#" ng-click="selectTrabajo($index)">{{ trabajo.title }}</a>
       </md-item-content>
     </md-item>
   </md-list>
   </md-content>
   <md-content flex="30">
-
+    {{ trabajo.title }}
   </md-content>
+
 </div>
