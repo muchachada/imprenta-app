@@ -18,9 +18,7 @@ Escribir un código un poco más lindo y que todos escribamos de manera consiste
 la guía de diseño de Google sobre su nuevo concepto de diseño: Material Design. Es la guía que vamos a
 seguir para el diseño de UX.
 
-[port de Paper Elements a Angular Directives](https://material.angularjs.org/). However, si vemos que la cosa no da, hacemos una UI
-inicial más o menos (Bootstrap, semantic-ui, Foundation) y nos vamos a centrar en la lógica y dejamos
-el diseño para lo último.
+[Material Design](https://material.angularjs.org/). Esta es la página donde sale el material que vamos a utilizar para el diseño de UX.
 
 ## NeDB
 
