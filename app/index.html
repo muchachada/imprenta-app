@@ -20,9 +20,19 @@
       </div>
     </md-toolbar>
     <md-content layout="row" layour-fill flex>
-      <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="true" style="background: #eee">
-        <md-button ui-sref="trabajos">Trabajos</md-button>
-        <md-button ui-sref="clientes">Clientes</md-button>
+      <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z1" style="background: #eee">
+        <md-list>
+          <md-item>
+            <md-item-content>
+              <md-button ui-sref="trabajos">Trabajos</md-button>
+            </md-item-content>
+          </md-item>
+          <md-item>
+            <md-item-content>
+              <md-button ui-sref="clientes">Clientes</md-button>
+            </md-item-content>
+          </md-item>
+        </md-list>
       </md-sidenav>
       <md-content ui-view></md-content>
     </md-content>
