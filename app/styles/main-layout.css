@@ -1,7 +1,15 @@
-// Menu sidenav
+/* Toolbar */
+
+.toolbar-menu-button {
+  padding-right: 10px;
+  position: relative;
+  bottom: -3px;
+}
+
+/* Menu sidenav */
 
 .menu-sidenav {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .menu-sidenav .menu-item {
