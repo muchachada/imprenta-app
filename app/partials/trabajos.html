@@ -1,5 +1,8 @@
 <div layout="row">
-  <md-content flex="70">
+  <md-content flex="66" layout="column">
+  <md-toolbar class="md-tall md-hue-2">
+
+  </md-toolbar>
   <md-list>
     <md-item ng-repeat="trabajo in trabajos">
       <md-item-content>
@@ -8,8 +11,27 @@
     </md-item>
   </md-list>
   </md-content>
-  <md-content flex="30">
-    {{ trabajo.title }}
+  <md-content flex="33" layout="column" class="trabajo-detail">
+    <md-toolbar class="md-tall md-hue-2">
+      <span flex></span>
+      <div class="md-toolbar-tools" layout="row">
+        <div class="title">{{ trabajo.title }}</div>
+      </div>
+    </md-toolbar>
+    <div class="info-section" ng-show="trabajo">
+
+      <div class="cliente">
+        <ng-md-icon icon="person" size="40"></ng-md-icon>
+        <span>{{ trabajo.cliente }}</span>
+      </div>
+
+      <div class="fecha-limite">
+          Fecha límite: {{ trabajo.fecha | date:'dd/MM/yyyy' }}
+      </div>
+    </div>
+    <div class="info-section" ng-hide="trabajo">
+      Selecciona un trabajo de la lista.
+    </div>
   </md-content>
 
 </div>
