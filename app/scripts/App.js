@@ -1,4 +1,4 @@
-angular.module('App', ['ngMaterial', 'ui.router'])
+angular.module('App', ['ngMaterial', 'ui.router', 'ngMdIcons'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
