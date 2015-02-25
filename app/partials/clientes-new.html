@@ -1,0 +1,22 @@
+ <form style="width:70%; margin:auto; max-width: 700px;">
+  <md-input-container>
+    <label>Apellido y Nombre</label>
+    <input ng-model="cliente.nomYApe" type="text">
+  </md-input-container>
+  <md-input-container>
+    <label>E-mail</label>
+    <input ng-model="cliente.Email" type="mail">
+  </md-input-container>
+  <div layout>
+    <md-input-container flex>
+      <label>CUIT o DNI</label>
+      <input ng-model="cliente.cuitDni" type="number">
+    </md-input-container>
+    <md-input-container flex>
+      <label>Teléfono</label>
+      <input ng-model="cliente.telefono" type="text">
+    </md-input-container>
+  </div>
+
+  <md-button class="md-raised md-primary" ng-click="save(cliente)">Guardar</md-button>
+ </form>
