@@ -10,11 +10,14 @@ angular.module('App').factory('ClientesService', function($rootScope){
   service.db = db;
 
   // Insert objects into DB, firing event
-  service.insert = function(doc, cb) {
-    this.db.insert(doc, function(){
-      console.log('inserted')
-      $rootScope.$broadcast('clientes-db-change');
-      cb() || function(){};
+  service.insert = function(doc) {
+    this.db.insert(doc, function(err, saved){
+      if(err || !saved){
+                console.log('error not inserted')
+            }else{
+              console.log('inserted')
+              $rootScope.$broadcast('clientes-db-change'); 
+            }
     });
   }
 
