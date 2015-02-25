@@ -15,4 +15,9 @@ angular.module('App', ['ngMaterial', 'ui.router'])
       templateUrl: "partials/clientes.html",
       controller: "ClientesController"
     })
+    .state('trabajos-new', {
+      url: "/trabajos/new",
+      templateUrl: "partials/trabajos-new.html",
+      controller: "TrabajosNewController"
+    })
 });
