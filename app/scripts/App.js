@@ -20,4 +20,9 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngMdIcons'])
       templateUrl: "partials/trabajos-new.html",
       controller: "TrabajosNewController"
     })
+    .state('clientes-new', {
+      url: "/clientes/new",
+      templateUrl: "partials/clientes-new.html",
+      controller: "ClientesNewController"
+    })
 });

@@ -1,1 +1,14 @@
-Clientes
+<div layout="row">
+  <md-content flex="70">
+  <md-list>
+    <md-item ng-repeat="cliente in clientes">
+      <md-item-content>
+        <a href="#" ng-click="selectCliente($index)">{{ cliente.nomYApe }}</a>
+      </md-item-content>
+    </md-item>
+  </md-list>
+  </md-content>
+  <md-content flex="30">
+    {{ cliente.title }}
+  </md-content>
+</div>
