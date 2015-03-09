@@ -5,57 +5,37 @@
   <meta charset="UTF-8">
   <title>Imprenta App</title>
 
-  <link rel="stylesheet" href="libs/angular-material/angular-material.css">
-  <link rel="stylesheet" href="libs/angular-material/default-theme.css">
-  <link rel="stylesheet" href="styles/main-layout.css">
-  <link rel="stylesheet" href="styles/trabajos-detail.css">
-  <link rel="stylesheet" href="styles/clientes-detail.css">
+  <link rel="stylesheet" href="libs/tether/css/tether.css">
+  <link rel="stylesheet" href="libs/foundation-apps/dist/css/foundation-apps.css">
+  <style>
+    body {
+      font-family: Roboto;
+    }
+  </style>
 </head>
 
 <body ng-controller="MainController">
 
-  <div layout="column" layout-fill>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-          <ng-md-icon icon="menu" ng-click="toggleLeftMenu()" class="toolbar-menu-button"></ng-md-icon>
-        <span>Imprenta App</span>
-        <!-- fill up the space between left and right area -->
-        <span flex></span>
+  <div class="grid-frame vertical">
+    <div class="primary title-bar">
+      <div class="left title"><a ui-sref="home">Imprenta App</a>
       </div>
-    </md-toolbar>
-    <md-content layout="row" layour-fill flex>
-      <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z1 menu-sidenav">
-        <md-list>
-          <md-item>
-            <md-item-content class="menu-item" ng-click="goTo('trabajos')">
-              <div layout>
-                <ng-md-icon icon="inbox" class="menu-icon"></ng-md-icon>
-                <span class="menu-text">Trabajos</span>
-              </div>
-            </md-item-content>
-          </md-item>
-          <md-item>
-            <md-item-content class="menu-item" ng-click="goTo('clientes')">
-              <div layout>
-                <ng-md-icon icon="person" class="menu-icon"></ng-md-icon>
-                <span class="menu-text">Clientes</a>
-              </div>
-            </md-item-content>
-          </md-item>
-        </md-list>
-      </md-sidenav>
-      <md-content ui-view flex></md-content>
-    </md-content>
+      <span class="right"><a ui-sref="settings">Settings</a></span>
+    </div>
+    <div class="grid-block">
+    </div>
   </div>
 
   <!-- Vendor scripts -->
   <script src="libs/angular/angular.js"></script>
   <script src="libs/angular-animate/angular-animate.js"></script>
-  <script src="libs/angular-aria/angular-aria.js"></script>
-  <script src="libs/angular-material/angular-material.js"></script>
   <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="libs/angular-material-icons/angular-material-icons.js"></script>
-  <script src="libs/svg-morpheus/compile/unminified/svg-morpheus.js"></script>
+  <script src="libs/fastclick/lib/fastclick.js"></script>
+  <script src="libs/hammerjs/hammer.js"></script>
+  <script src="libs/tether/tether.js"></script>
+  <script src="libs/viewport-units-buggygill/viewport-units-buggyfill.js"></script>
+  <script src="libs/foundation-apps/dist/js/foundation-apps.js"></script>
+
 
   <!-- App scripts -->
   <script src="scripts/App.js"></script>

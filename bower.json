@@ -7,9 +7,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "angular-material": "~0.7.1",
     "angular-ui-router": "~0.2.13",
-    "angular-material-icons": "~0.4.0",
-    "svg-morpheus": "~0.1.8"
+    "foundation-apps": "~1.0.3"
   }
 }
