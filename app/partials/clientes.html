@@ -1,22 +1,14 @@
 <div layout="row">
   <md-content flex="66" layout="column">
-  <md-toolbar class="md-tall md-hue-2">
-  </md-toolbar>
-  <md-list>
-    <md-item ng-repeat="cliente in clientes">
-      <md-item-content>
-        <a href="#" ng-click="selectCliente($index)">{{ cliente.title }}</a>
-      </md-item-content>
-    </md-item>
-  </md-list>
+    <md-list>
+      <md-item ng-repeat="cliente in clientes">
+        <md-item-content>
+          <a href="#" ng-click="selectCliente($index)">{{ cliente.title }}</a>
+        </md-item-content>
+      </md-item>
+    </md-list>
   </md-content>
   <md-content flex="33" layout="column" class="cliente-detail">
-    <md-toolbar class="md-tall md-hue-2">
-      <span flex></span>
-      <div class="md-toolbar-tools" layout="row">
-        <div class="title">{{ cliente.title }}</div>
-      </div>
-    </md-toolbar>
     <div class="info-section" ng-show="cliente">
 
       <div class="name-cliente">

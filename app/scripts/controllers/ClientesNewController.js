@@ -6,7 +6,6 @@ angular.module('App').controller('ClientesNewController', [
     $scope.save = function (cliente) {
       cliente.title = cliente.nomYApe
       Clientes.insert(cliente);
-      $state.go('clientes')
     }
 
 }]);
