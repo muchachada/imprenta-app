@@ -1,4 +1,4 @@
-angular.module('App', ['ngMaterial', 'ui.router', 'ngMdIcons'])
+angular.module('App', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -10,19 +10,9 @@ angular.module('App', ['ngMaterial', 'ui.router', 'ngMdIcons'])
       templateUrl: "partials/trabajos.html",
       controller: "TrabajosController"
     })
-    .state('clientes', {
-      url: "/clientes",
-      templateUrl: "partials/clientes.html",
-      controller: "ClientesController"
-    })
     .state('trabajos-new', {
       url: "/trabajos/new",
       templateUrl: "partials/trabajos-new.html",
       controller: "TrabajosNewController"
-    })
-    .state('clientes-new', {
-      url: "/clientes/new",
-      templateUrl: "partials/clientes-new.html",
-      controller: "ClientesNewController"
     })
 });
