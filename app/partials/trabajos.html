@@ -1,37 +1,25 @@
-<div layout="row">
-  <md-content flex="66" layout="column">
-  <md-toolbar class="md-tall md-hue-2">
+<style>
+  .trabajos-container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
 
-  </md-toolbar>
-  <md-list>
-    <md-item ng-repeat="trabajo in trabajos">
-      <md-item-content>
-        <a href="#" ng-click="selectTrabajo($index)">{{ trabajo.title }}</a>
-      </md-item-content>
-    </md-item>
-  </md-list>
-  </md-content>
-  <md-content flex="33" layout="column" class="trabajo-detail">
-    <md-toolbar class="md-tall md-hue-2">
-      <span flex></span>
-      <div class="md-toolbar-tools" layout="row">
-        <div class="title">{{ trabajo.title }}</div>
-      </div>
-    </md-toolbar>
-    <div class="info-section" ng-show="trabajo">
+<div class="full-height full-width trabajos-container">
 
-      <div class="cliente">
-        <ng-md-icon icon="person" size="40"></ng-md-icon>
-        <span>{{ trabajo.cliente }}</span>
-      </div>
-
-      <div class="fecha-limite">
-          Fecha límite: {{ trabajo.fecha | date:'dd/MM/yyyy' }}
-      </div>
+  <!-- Menu -->
+  <div class="ui menu full-width">
+    <div class="header item">Trabajos</div>
+    <div class="item right">
+      <button class="ui button green icon">
+        <i class="ui icon add"></i> Nuevo trabajo
+      </button>
     </div>
-    <div class="info-section" ng-hide="trabajo">
-      Selecciona un trabajo de la lista.
-    </div>
-  </md-content>
+  </div>
+
+  <!-- List-details container-->
+  <div style="full-width full-height" style="flex-grow: 1">
+
+  </div>
 
 </div>

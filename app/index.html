@@ -6,11 +6,20 @@
   <title>Imprenta App</title>
 
   <link rel="stylesheet" href="libs/semantic-ui/dist/semantic.css">
+  <style>
+    .full-width {
+      width: 100%;
+    }
+    .full-height {
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body ng-controller="MainController">
 
-  <h1>Hola</h1>
+  <div ui-view class="full-width full-height">
+  </div>
 
   <!-- Vendor scripts -->
   <script src="libs/jquery/dist/jquery.js"></script>
