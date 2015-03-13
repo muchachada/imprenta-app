@@ -18,8 +18,36 @@
   </div>
 
   <!-- List-details container-->
-  <div style="full-width full-height" style="flex-grow: 1">
+  <div class="full-width full-height ui padded grid" style="flex-grow: 1">
+    <div class="ten wide column full-height" style="height: calc(100% - 48px)">
+      <div class="ui segment full-height" style="overflow-y: scroll">
 
+        <table class="ui very basic table">
+          <tbody>
+            <tr ng-repeat="trabajo in trabajos">
+              <td><i class="ui red large icon warning circle"></i></td>
+              <td>Factura B</td>
+              <td>Gustavo Rodriguez</td>
+              <td>3 días</td>
+              <td>
+                <button class="ui button green icon">
+                  <i class="ui icon checkmark"></i> Hecho
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="six wide column">
+      <div class="ui segment">
+        <h3 class="ui header">Factura B</h3>
+        <div class="ui item"><b>CUIT: </b> 35-6375364-6</div>
+        {{ trabajo }}
+      </div>
+    </div>
   </div>
 
 </div>
