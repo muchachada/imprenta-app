@@ -1,23 +1,24 @@
 angular.module('App').controller('TrabajosController', [
   '$scope',
-  'TrabajosService',
-  function($scope, Trabajos) {
+  'Models',
+  function($scope, Models) {
+    var Trabajos = Models.Trabajos;
 
-  updateTrabajosList();
+    updateTrabajosList();
 
-  $scope.$on('trabajos-db-change', updateTrabajosList)
+    $scope.$on('trabajos-db-change', updateTrabajosList)
 
-  function updateTrabajosList() {
-    console.log('updated')
-    Trabajos.db.find({}, function(err, docs){
-      $scope.trabajos = docs;
-      $scope.$apply();
-    })
-  };
+    function updateTrabajosList() {
+      Trabajos.db.find({}, function(err, docs) {
+        $scope.trabajos = docs;
+        $scope.$apply();
+      })
+    };
 
-  $scope.selectTrabajo = function (i) {
-    $scope.trabajo = $scope.trabajos[i]
+    $scope.selectTrabajo = function(i) {
+      $scope.trabajo = $scope.trabajos[i]
+    }
+
+
   }
-
-
-}]);
+]);
