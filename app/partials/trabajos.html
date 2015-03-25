@@ -1,37 +1,53 @@
-<div layout="row">
-  <md-content flex="66" layout="column">
-  <md-toolbar class="md-tall md-hue-2">
+<style>
+  .trabajos-container {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
 
-  </md-toolbar>
-  <md-list>
-    <md-item ng-repeat="trabajo in trabajos">
-      <md-item-content>
-        <a href="#" ng-click="selectTrabajo($index)">{{ trabajo.title }}</a>
-      </md-item-content>
-    </md-item>
-  </md-list>
-  </md-content>
-  <md-content flex="33" layout="column" class="trabajo-detail">
-    <md-toolbar class="md-tall md-hue-2">
-      <span flex></span>
-      <div class="md-toolbar-tools" layout="row">
-        <div class="title">{{ trabajo.title }}</div>
-      </div>
-    </md-toolbar>
-    <div class="info-section" ng-show="trabajo">
+<div class="full-height full-width trabajos-container">
 
-      <div class="cliente">
-        <ng-md-icon icon="person" size="40"></ng-md-icon>
-        <span>{{ trabajo.cliente }}</span>
-      </div>
+  <!-- Menu -->
+  <div class="ui menu full-width">
+    <div class="header item">Trabajos</div>
+    <div class="item right">
+      <button class="ui button green icon">
+        <i class="ui icon add"></i> Nuevo trabajo
+      </button>
+    </div>
+  </div>
 
-      <div class="fecha-limite">
-          Fecha límite: {{ trabajo.fecha | date:'dd/MM/yyyy' }}
+  <!-- List-details container-->
+  <div class="full-width full-height ui padded grid" style="flex-grow: 1">
+    <div class="ten wide column full-height" style="height: calc(100% - 48px)">
+      <div class="ui segment full-height" style="overflow-y: scroll">
+
+        <table class="ui very basic table">
+          <tbody>
+            <tr ng-repeat="trabajo in trabajos">
+              <td><i class="ui red large icon warning circle"></i></td>
+              <td>trabajo.tipo</td>
+              <td>trabajo.cliente</td>
+              <td>trabajo.fechaLimite</td>
+              <td>
+                <button class="ui button green icon">
+                  <i class="ui icon checkmark"></i> Hecho
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </div>
-    <div class="info-section" ng-hide="trabajo">
-      Selecciona un trabajo de la lista.
+
+    <div class="six wide column">
+      <div class="ui segment">
+        <h3 class="ui header">Factura B</h3>
+        <div class="ui item"><b>CUIT: </b> 35-6375364-6</div>
+        {{ trabajo }}
+      </div>
     </div>
-  </md-content>
+  </div>
 
 </div>
